@@ -1,2 +1,2 @@
 # mas-sim
-A pure python multiagent simulation framwork.
+A group of multiagent examples with Mesa.

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-CONENV="mas"
+CONENV="mesa"
 CONCON=$(which conda)
 CONBIN=${CONCON%/*}
 CONPATH=${CONBIN%/*}
@@ -23,7 +23,8 @@ fi
 export PYTHONPATH=$PYTHONPATH:`pwd`
 if [ $# -gt 0 ]
 then
-  python $1.py $2 $3
+    jupyter notebook $1.ipynb
+    open -a "Google Chrome.app" https://localhost:8888
 else
   for file in "tests/test_"*".py"
   do
